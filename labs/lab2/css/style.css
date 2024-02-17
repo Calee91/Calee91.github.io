@@ -1,0 +1,60 @@
+body {
+    font-family: Karla, sans-serif;
+    color: #484848;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+header{
+    background-color: #FF5A5F;
+    height: 80px;
+}
+
+#logo {
+    height: 80px;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+    
+}
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+    line-height: 80px;
+  
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+.content {
+    width: 900px;
+    margin: auto;
+}
+
+section {
+    padding: 20px;
+    border: 1px solid #cccccc;  
+    margin-bottom: 20px;
+}
+
+section img {
+    width: 500px;
+}
+
