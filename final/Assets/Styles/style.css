@@ -1,0 +1,210 @@
+/*main page*/
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#home{
+    background-color:#D7B1B1;
+    height: 850px;
+}
+
+.animal-pic img{
+    position: relative; 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 50%; } 
+
+
+#Max{
+    position: absolute;
+    right:46%;
+    top:20%
+}
+
+#Shelly{
+    position: absolute;
+    right:20%;
+    top:20%;
+}
+
+#Muffin{
+    position: absolute;
+    right:46%;
+    top: 50%; 
+}
+
+#Pumpkin{
+    position: absolute;
+    right:20%;
+    top: 50%; 
+}
+
+
+h1{
+    font-family:"inria serif";
+    font-size: 72px;
+}
+
+#Adopt{
+    position: absolute;
+    top: 30%;
+    left:10%;
+    letter-spacing: 5px; 
+}
+
+#Here{
+    position: absolute;
+    top: 45%; 
+    left:10%;
+    letter-spacing: 5px;
+}
+
+
+/* Image animation*/ 
+
+@keyframes bounce {
+	0%{transform: translateY(-0px)}
+	30%{transform: translateY(-20px)}
+}
+
+.animal:hover{
+    animation:bounce 1.5s ease-in-out 0s infinite reverse;
+}
+
+
+
+
+/* Second page */
+
+#content{
+    height: 100vh;
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+}
+
+.return{
+    width: 90px; 
+    height: 80px;
+}
+
+#social-media{
+    width: 90px; 
+    height: 80px;
+}
+
+#pic-max:hover{
+    cursor: grab;
+}
+
+#pic-shelly:hover{
+    cursor: grab;
+}
+#pic-pumpkin:hover{
+    cursor: grab;
+}
+#pic-muffin:hover{
+    cursor: grab;
+}
+
+#max{
+    background-color: #D1DEE6;
+}
+
+#pumpkin{
+    background-color: #CCAC8C;
+}
+
+#muffin{
+    background-color: #C3B5A8;
+}
+
+#shelly{
+    background-color: #7890B6;
+}
+
+#pic-max img{
+    margin-top: 60px;
+}
+
+#pic-shelly{
+    margin-top: 60px;
+}
+
+#pic-pumpkin img{
+    margin-top: 60px;
+}
+
+#pic-muffin{
+    margin-top: 60px;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.cont-title{
+    color:#B52929;
+    position: relative;
+    padding-left: 40px;
+    top: -30px;
+}
+
+h2{
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+h3{
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+.description{
+    position: relative;
+    padding-left: 30px;
+    top: -60px;
+}
+
+p{
+    font-size: 36px;
+    font-family:"inria serif";
+}
+
+
+.bottom-description{
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+}
+
+.first-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.icon{
+    width: 100px; 
+    height: 100px;
+    padding-left: 30px;
+}
+
+.icon-text{
+    margin-left: 70px;
+}
+
