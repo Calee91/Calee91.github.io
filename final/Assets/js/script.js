@@ -10,7 +10,6 @@ buttonmax.addEventListener("click", event => {
 });
 
 
-
 function toggleSocialMediaIcons() {
     const contact = window.getComputedStyle(socialMediaIcons);
     if (contact.display === "none") {
