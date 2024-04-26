@@ -1,6 +1,170 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        Lab 1
-    </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 8</title>
+  <link rel="stylesheet" type="text/css" href="assets\styles\atom-one-light.css" />
+  <link rel="stylesheet" type="text/css" href="assets\styles\style.css" />
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="header-caption">
+        <img id="header-caption-logo" src="assets\images\logo.png" />
+        <div id="header-caption-name">Web Design DeCal</div>
+      </div>
+      <div id="header-content">
+        <div id="header-title">Lab 8</div>
+        <div id="header-due">April 22nd</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block block-highlight">
+        <p>
+          This lab will get us more familiar with making JavaScript interact with elements on the webpage.
+        </p>
+        <p>
+          Throughout the lab, it might help to refer back to
+          <a target="_blank"
+            href="https://docs.google.com/presentation/d/18Uq7zOQe3frm-pxkUrRd0AwkUr0rDujY-c9ldS1o1Fc/edit?usp=share_link">this
+            week's slides</a>
+          if you'd like to revisit a concept from lecture.
+        </p>
+      </div>
+
+      <!-- Body starts here -->
+      <h2>Assignment</h2>
+      <p>
+        We have provided you with the backbone for this lab. You can download
+        the assignment file here:
+      </p>
+      <a class="download_button" href="lab8-starter.zip">
+        <div class="download">Download File</div>
+      </a>
+      <p>
+        If you open the provided
+        starter <code>index.html</code> in your browser, it should look like
+        this:
+      </p>
+      <p><img src="assets\images\starterscreenshot.png" /></p>
+      <p>
+        Our goal is to add functionality to the "Toggle Dark Mode" button.
+      </p>
+      <h2>Part 1: Think about this in English</h2>
+      <p>
+        Recall this lecture slide content:
+      </p>
+      <p><img src="assets\images\lectureslide.png" /></p>
+      <p>
+        So think about this dark mode feature. We can frame this as:
+      </p>
+      <p>
+        When the user clicks on <strong>the "Toggle Dark Mode" button</strong>, then <strong>add or remove</strong> some
+        <strong>css to the page</strong>.
+      </p>
+      <p>
+        For the css aspect, our dark mode would be a css class that would apply to an element on the page, to change the
+        color scheme. When the css class it not used, then the color scheme would be light, like it is right now.
+      </p>
+      <p>
+        From the lecture (and the previous hw), we learned that we can use JavaScript to:
+      <ol>
+        <li>Grab an HTML element on the page. If it has an id, we can call <code>document.getElementById()</code>, or in
+          general given a tag or id, we can call <code>document.querySelector()</code>.</li>
+        <li>Change the CSS of an element by adding/removing a class. The JS representation of an HTML element is an
+          <em>object</em>. This object has <em>methods</em> and <em>properties</em> related to the css classes of the
+          element. Specifically, we can call <code>elementObject.classList.add()</code> to use JS to add a class to the
+          element, <code>elementObject.classList.remove()</code> to remove a specific class, and
+          <code>elementObject.classList.toggle()</code> will toggle a class name for us.
+        </li>
+      </ol>
+      </p>
+      <p><strong>Example:</strong> <code>document.getElementById("logo")</code> would give you the element object for
+        the HTML element with <code>id="logo"</code>. Let's say you store it in a variable called
+        <code>logoElement</code>. Then running the code <code>logoElement.classList.add("flipped-logo")</code> would add
+        the <code>.flipped-logo</code> css class to the html element.
+      </p>
+
+
+      <h2 id="part-2">Part 2: Define a function.</h2>
+      <ol>
+        <li>
+          The starter files already include <code>script.js</code>. Start by adding the <code>&lt;script&gt;</code> tag
+          to the bottom of <code>index.html</code>, right before <code>&lt;/body&gt;</code>, so the webpage knows where
+          to find the js file. We put it at the bottom so that all of the HTML loads on the page before running any js
+          code.
+        </li>
+        <li>
+          Our goal: <strong>define a function</strong> named <code>toggleTheme()</code>. The function should take no
+          parameters, and should not return anything. When the function is run, it should:
+          <ol type="a">
+            <li>Identify the <code>&lt;body&gt;</code> element of the page</li>
+            <li>Toggle <code>.dark-mode</code> css class on <code>&lt;body&gt;</code></li>
+          </ol>
+        </li>
+        <li>
+          Now that you've defined the function, let's <strong>test</strong> the function. On the grocery list page, open
+          the console and <strong>call the function</strong>: <code>toggleTheme()</code>. The css changes should happen!
+          The designer did not think through the dark mode theme very well, so the existing css will make the page look
+          like this:
+          <p><img src="assets/images/darkscreenshot.png" alt=""></p>
+        </li>
+      </ol>
+
+
+      <h2 id="part-3">Part 3: Connect the function to the button.</h2>
+      <p>
+        If your function works by manually calling it in the console, then let's hook it up to the button now.
+      </p>
+      <p>
+        Our goal: Use JS to get the toggle button element, and store it in a variable with a reasonable name.
+      </p>
+      <p>
+        Once you've done that, add the following line of code, which tells the browser: when the button is clicked on,
+        call the <code>toggleTheme</code> function.
+      </p>
+      <p>
+        <code>
+            buttonVariable.onclick = toggleTheme;
+          </code>
+      </p>
+
+
+      <h2 id="part-4">Part 4: Make it pretty!</h2>
+      <p>
+        As you've noticed, the dark mode theme is rather harsh on the eyes. At the bottom of <code>style.css</code>,
+        write some nice css to improve the color scheme. This is actually very important; we spent effort implementing
+        the toggle functionality, but this feature is not worth using until the color scheme is good! Refer to the <a
+          href="https://www.material.io/design/color/dark-theme.html" target="_blank">Material Design documentation on
+          dark themes</a>, especially the <em>Properties</em> and <em>UI Application</em> sections.
+      </p>
+
+
+      <div class="section">
+        <h2>Submission</h2>
+        <div class="block block-highlight">
+  
+          <!-- Submission info starts here -->
+          <div id="submission-content">
+            <p>Submit your files to your GitHub Submission Repository by copying all the files inside the
+              "lab8-starter" folder into the lab8 folder of your submission
+              repository (replace the index.html originally in it). In your terminal, from your GitHub
+              Submission Repository, run the following Git commands:</p>
+            <ul>
+              <li>git add -A</li>
+              <li>git commit -m 'finished lab8'</li>
+              <li>git push</li>
+            </ul>
+            <p>This assignment is due Monday, April 22nd at 7:00PM PDT.</p>
+          </div>
+          <!-- Submission info ends here -->
+  
+        </div>
+      </div>
+    </div>
+</body>
+
 </html>
+<!-- @webdesigndecal/mark2html@0.0.11 -->
